@@ -8,6 +8,8 @@ import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 
+
+
 export default function Home() {
   const { scrollY } = useScroll()
   const backgroundY = useTransform(scrollY, [0, 500], [0, 150])
@@ -22,11 +24,11 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black" />
           <div className="grid grid-cols-12 gap-2 p-4 opacity-20">
             {Array.from({ length: 96 }).map((_, i) => {
-              // Calculate row and column indices
+              //row and column indices
               const row = Math.floor(i / 12) // 12 columns per row
               const col = i % 12
 
-              // Create a wave delay based on position
+              //wave delay based on position
               const waveOffset = (row + col) * 20 // Adjust this for wave speed
 
               // Each cell shrinks and fades with a wave effect
@@ -40,7 +42,9 @@ export default function Home() {
                   className="h-16 bg-primary/20 rounded-lg"
                 />
               )
-            })}
+            }
+            )
+            }
           </div>
         </motion.div>
         <motion.div
@@ -76,7 +80,7 @@ export default function Home() {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.5 }}
             >
-              Full Stack Developer. Computer Science Student at the University of Victoria
+              Computer Science Student at the University of Victoria
             </motion.p>
 
             {/* Buttons Below the Text */}
