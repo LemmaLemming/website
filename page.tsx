@@ -48,8 +48,7 @@ export default function Home() {
           </div>
         </motion.div>
         <motion.div
-          style={{ opacity }}
-          className="relative z-10 flex flex-row items-center justify-center gap-6"
+          className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-6 text-center md:text-left"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
